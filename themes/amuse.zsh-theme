@@ -9,9 +9,10 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 ZSH_THEME_RUBY_PROMPT_PREFIX="%{$fg_bold[red]%}‹"
 ZSH_THEME_RUBY_PROMPT_SUFFIX="›%{$reset_color%}"
+HOSTNAME=`hostname -s`
 
 PROMPT='
-%{$fg_bold[green]%}%~%{$reset_color%}$(git_prompt_info)$(virtualenv_prompt_info) ⌚ %{$fg_bold[red]%}%*%{$reset_color%}
+$HOSTNAME:%{$fg_bold[green]%}%~%{$reset_color%}$(git_prompt_info)$(virtualenv_prompt_info) ⌚ %{$fg_bold[red]%}%*%{$reset_color%}
 $ '
 
 RPROMPT='$(ruby_prompt_info)'
